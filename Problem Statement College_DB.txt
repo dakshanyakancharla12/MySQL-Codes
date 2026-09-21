@@ -1,0 +1,37 @@
+Problem Statement
+
+A college wants to maintain information about its courses and students.
+
+Create a database named college_db and create the following tables:
+
+courses
+Column	Data Type	Constraint
+course_id	INT	PRIMARY KEY
+course_name	VARCHAR(100)	UNIQUE, NOT NULL
+duration	INT	CHECK
+fees	DECIMAL(10,2)	CHECK
+students
+Column	Data Type	Constraint
+student_id	INT	PRIMARY KEY
+student_name	VARCHAR(100)	NOT NULL
+email	VARCHAR(100)	UNIQUE
+age	INT	CHECK
+city	VARCHAR(50)	DEFAULT
+course_id	INT	FOREIGN KEY
+Requirements
+Create the database.
+Create the courses table.
+Insert at least 3 courses.
+Create the students table.
+Insert at least 5 students.
+Demonstrate all six constraints:
+PRIMARY KEY
+FOREIGN KEY
+NOT NULL
+UNIQUE
+DEFAULT
+CHECK
+Display all students.
+Display students along with their course names.
+Find students above a particular age.
+Find students enrolled in a particular course.
