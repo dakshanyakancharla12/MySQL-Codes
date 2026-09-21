@@ -1,16 +1,21 @@
 CREATE DATABASE company_db;
+
 USE company_db;
+
 SHOW DATABASES;
+
 CREATE TABLE departments (
     department_id INT PRIMARY KEY,
     department_name VARCHAR(100) UNIQUE NOT NULL
 );
+
 DESC departments;
 INSERT INTO departments
 VALUES (1, 'Computer Science');
 INSERT INTO departments
 VALUES (2, 'Mechanical');
 SELECT * FROM departments;
+
 CREATE TABLE employees (
     employee_id INT PRIMARY KEY,
 
@@ -27,6 +32,7 @@ CREATE TABLE employees (
     FOREIGN KEY (department_id)
     REFERENCES departments(department_id)
 );
+
 INSERT INTO employees
 (employee_id, name, email, salary, department_id)
 VALUES
